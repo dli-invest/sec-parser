@@ -1,10 +1,8 @@
 import sys
 import unittest
-
 sys.path.append("..")
-sys.path.append("../parser")
 
-from .clk import get_list_of_ciks
+from parser.clk import get_list_of_ciks
 
 
 
