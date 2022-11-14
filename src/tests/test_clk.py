@@ -1,8 +1,7 @@
 import sys
 import unittest
-sys.path.append("..")
 
-from parser.clk import get_list_of_ciks
+from sec_parse.clk import get_list_of_ciks
 
 
 
