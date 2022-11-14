@@ -1,4 +1,4 @@
-from .clk import get_list_of_ciks
+from sec_parser.clk import get_list_of_ciks
 
 def test_clk():
     df = get_list_of_ciks()
