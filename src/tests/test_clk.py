@@ -1,6 +1,9 @@
 import sys
 import unittest
 
+sys.path.append("..")
+sys.path.append("../sec_parser")
+
 from sec_parser.clk import get_list_of_ciks
 
 
