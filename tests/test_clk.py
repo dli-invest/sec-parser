@@ -1,6 +1,6 @@
 import sys
 sys.path.append('../sec_parser')
-
+sys.path.append('..')
 from sec_parser.clk import get_list_of_ciks
 
 def test_clk():
