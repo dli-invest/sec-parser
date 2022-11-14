@@ -1,2 +1,2 @@
 import sys
-sys.path.append('..sec_parser')
+sys.path.append('../sec_parser')
