@@ -1,7 +1,7 @@
 # parses ciks from the SEC Edgar database
 import os
 import pandas as pd
-from constants import ticker_url
+from sec_parse.constants import ticker_url
 
 def get_list_of_ciks(sec_url: str = ticker_url) -> pd.DataFrame:
     """
@@ -13,7 +13,7 @@ def get_list_of_ciks(sec_url: str = ticker_url) -> pd.DataFrame:
     # make sure cik_tickers.txt does not exist
     if os.path.exists('cik_tickers.txt'):
         # need to pad zeros until the length is 10, or could do that during use
-        return pd.read_csv('cik_tickers.txt', sep='\t', header=None, names=['ticker', 'cik'])
+        return pd.read_csv('cik_tickers.txt', sep='\t', index_col=False)
     # read ticker.txt from SEC Edgar database
     df = pd.read_csv(sec_url, sep='\t', header=None, names=['ticker', 'cik'])
     # pad zeros until the length is 10
