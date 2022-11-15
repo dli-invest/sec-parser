@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.9"]
+        python-version: ["3.10"]
 
     steps:
     - uses: actions/checkout@v2
@@ -26,7 +26,6 @@ jobs:
         pip install -r requirements.txt
     - name: Coverage Report
       run: |
-        cd src
         python -m pytest --cov=./ --cov-report=xml
 
     - name: Upload coverage to Codecov
